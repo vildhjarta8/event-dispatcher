@@ -1,0 +1,17 @@
+{
+    "name": "KovalevskyProjects/EventDispatcher",
+    "description": "World's simplest event dispatcher",
+    "minimum-stability": "dev",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Artur Kovalevsky",
+            "email": "kovalevskyproj@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-0": {
+            "KovalevskyProjects": "src/"
+        }
+    }
+}
