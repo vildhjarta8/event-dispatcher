@@ -11,11 +11,10 @@
     ],
     "autoload": {
         "psr-0": {
-            "KovalevskyProjects\\EventDispatcher\\": ""
+            "KovalevskyProjects": "src/"
         }
     },
     "require": {
         "php": ">=5.3.3"
-    },
-    "target-dir": "KovalevskyProjects/EventDispatcher"
+    }
 }
