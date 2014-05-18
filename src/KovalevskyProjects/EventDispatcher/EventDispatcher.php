@@ -25,11 +25,13 @@ class EventDispatcher implements EventDispatcherInterface
     /**
      * Dispatches the specified event.
      *
-     * @param string $event Event's name.
+     * @param string       $event      Event's name.
+     *
+     * @param string|array $parameters Optional event's parameters.
      *
      * @api
      */
-    public function trigger($event)
+    public function trigger($event, $parameters = null)
     {
         if (!isset($this->events[$event])) {
             return;
@@ -37,7 +39,7 @@ class EventDispatcher implements EventDispatcherInterface
 
         foreach ($this->events[$event] as $action)
         {
-            call_user_func_array($action, array());
+            call_user_func_array($action, (array) $parameters);
         }
     }
 

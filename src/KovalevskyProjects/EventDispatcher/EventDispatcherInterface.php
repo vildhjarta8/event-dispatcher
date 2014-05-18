@@ -12,11 +12,13 @@ interface EventDispatcherInterface
     /**
      * Dispatches the specified event.
      *
-     * @param string $event Event's name.
+     * @param string       $event      Event's name.
+     *
+     * @param string|array $parameters Optional event's parameters.
      *
      * @api
      */
-    public function trigger($event);
+    public function trigger($event, $parameters = null);
 
     /**
      * Adds the action for the event.
@@ -24,6 +26,7 @@ interface EventDispatcherInterface
      * @param string   $event  Event's name.
      * @param callable $action The function that will be called on event.
      *
+     * @return EventDispatcherInterface
      * @api
      */
     public function on($event, Callable $action);
