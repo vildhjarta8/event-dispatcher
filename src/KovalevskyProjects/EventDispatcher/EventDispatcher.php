@@ -37,9 +37,8 @@ class EventDispatcher implements EventDispatcherInterface
             return;
         }
 
-        foreach ($this->events[$event] as $action)
-        {
-            call_user_func_array($action, (array) $parameters);
+        foreach ($this->events[$event] as $action) {
+            call_user_func_array($action, (array)$parameters);
         }
     }
 
@@ -111,7 +110,8 @@ class EventDispatcher implements EventDispatcherInterface
             return;
         }
 
-        foreach ($events as $event) {
+        foreach ($events as $event)
+        {
             $this->on($event, $action);
         }
     }
@@ -130,6 +130,7 @@ class EventDispatcher implements EventDispatcherInterface
     {
         if (null === $events) {
             $this->events = array();
+
             return;
         }
 

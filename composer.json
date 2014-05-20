@@ -1,6 +1,6 @@
 {
     "name": "kovalevsky-projects/event-dispatcher",
-    "description": "World's simplest event dispatcher",
+    "description": "jQuery like event dispatcher for PHP",
     "minimum-stability": "dev",
     "license": "MIT",
     "authors": [
